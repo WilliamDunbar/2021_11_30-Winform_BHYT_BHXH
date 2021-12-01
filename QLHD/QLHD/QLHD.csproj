@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4B7770B-90BE-40CC-93DE-8E7C197215FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLHD</RootNamespace>
+    <AssemblyName>QLHD</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\packages\Bunifu_UI_v1.52\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp">
+      <HintPath>..\packages\FontAwesome.Sharp.5.13.0\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\packages\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\packages\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ChiTietDongBHXH.cs" />
+    <Compile Include="Database\ChiTietDongBHYT.cs" />
+    <Compile Include="Database\ChiTietHopDong.cs" />
+    <Compile Include="Database\ChucVu.cs" />
+    <Compile Include="Database\ChuyenMon.cs" />
+    <Compile Include="Database\DanToc.cs" />
+    <Compile Include="Database\HonNhan.cs" />
+    <Compile Include="Database\HopDongLD.cs" />
+    <Compile Include="Database\LoaiHopDong.cs" />
+    <Compile Include="Database\Model_QuanLy_NhanSu.cs" />
+    <Compile Include="Database\NhanVien.cs" />
+    <Compile Include="Database\NoiCap.cs" />
+    <Compile Include="Database\PhongBan.cs" />
+    <Compile Include="Database\SoBHXH.cs" />
+    <Compile Include="Database\SoBHYT.cs" />
+    <Compile Include="Database\sysdiagram.cs" />
+    <Compile Include="Database\TaiKhoan.cs" />
+    <Compile Include="Database\ThongTinBHXH.cs" />
+    <Compile Include="Database\ThongTinBHYT.cs" />
+    <Compile Include="Database\ThongTinCaNhan.cs" />
+    <Compile Include="Database\ThongTinHopDong.cs" />
+    <Compile Include="Database\Tinh.cs" />
+    <Compile Include="Database\TonGiao.cs" />
+    <Compile Include="Database\TrinhDoVH.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLy_BHXH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy_BHXH.Designer.cs">
+      <DependentUpon>QuanLy_BHXH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy_BHYT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy_BHYT.Designer.cs">
+      <DependentUpon>QuanLy_BHYT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy_HopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy_HopDong.Designer.cs">
+      <DependentUpon>QuanLy_HopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy_Nhanvien.Designer.cs">
+      <DependentUpon>QuanLy_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trangchu.Designer.cs">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QuanLy_BHXH.resx">
+      <DependentUpon>QuanLy_BHXH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy_BHYT.resx">
+      <DependentUpon>QuanLy_BHYT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy_HopDong.resx">
+      <DependentUpon>QuanLy_HopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy_Nhanvien.resx">
+      <DependentUpon>QuanLy_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trangchu.resx">
+      <DependentUpon>Trangchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="References\1.jpg" />
+    <Content Include="References\2.jpg" />
+    <Content Include="References\3.jpg" />
+    <Content Include="References\4.jpg" />
+    <Content Include="References\GTVT.png" />
+    <Content Include="References\GTVT_bang_ron.png" />
+    <Content Include="References\images.jfif" />
+    <Content Include="References\login_animation.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
